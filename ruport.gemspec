@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
 
   if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
     s.add_runtime_dependency(%q<pdf-writer>, ["= 1.1.8"])
-    s.add_runtime_dependency(%q<prawn>, ["= 0.12.0"])
+    s.add_runtime_dependency(%q<prawn>, [">= 0.12.0", "< 2.1.0"]) # tested on 2.0.x, but not 2.1.x
   else
     s.add_dependency(%q<pdf-writer>, ["= 1.1.8"])
     s.add_runtime_dependency(%q<prawn>, ["= 0.12.0"])
